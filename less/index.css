@@ -1,0 +1,453 @@
+/* 1. 放样式初始化 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 移动端都会设置盒模型为border-box */
+  box-sizing: border-box;
+  /* 去掉内边框 */
+  outline: 0;
+  /* 去除a标签的按住高亮背景色 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+input,
+select {
+  /* 消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式 */
+  /* 另外，select加上这个属性后，select的高度就可以改变了 */
+  -webkit-appearance: none;
+}
+/* 去掉小圆点 */
+li {
+  list-style: none;
+}
+img {
+  /* 去除图片3px间隙 */
+  vertical-align: middle;
+}
+a {
+  background: transparent;
+  text-decoration: none;
+  /* 设置a标签的高亮背景色 手指按住的时候会出现 */
+  -webkit-tap-highlight-color: transparent;
+  color: #666;
+}
+/* 样式初始化 */
+html {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  background-color: white;
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+a:active {
+  outline: 0;
+}
+a:active {
+  color: #006699;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+  border: 0;
+  outline: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form,
+blockquote {
+  margin: 0;
+}
+ul,
+ol,
+li,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none outside none;
+}
+h1,
+h2,
+h3 {
+  line-height: 2;
+  font-weight: normal;
+}
+h1 {
+  font-size: 18px;
+}
+h2 {
+  font-size: 16px;
+}
+h3 {
+  font-size: 14px;
+}
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #cccccc;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #cccccc;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #cccccc;
+}
+/* 2. 放所有页面都会用到公共类 */
+.bl {
+  border-left: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+/* 头部公共样式 */
+#header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  padding: 0 5px 0 10px;
+  line-height: 45px;
+  background-color: #f7f7f7;
+  z-index: 999;
+}
+#header .city {
+  width: 30px;
+  color: #d3079e;
+  font-size: 12px;
+}
+#header .title {
+  flex: 1;
+  text-align: center;
+  font-size: 15px;
+}
+#header .user {
+  width: 25px;
+}
+#header .user img {
+  width: 25px;
+}
+#slide {
+  margin-top: 45px;
+  width: 100vw;
+}
+#slide a img {
+  width: 100%;
+}
+#nav {
+  width: 100vw;
+}
+#nav #nav-wrap1 ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0 0 5px;
+}
+#nav #nav-wrap1 ul li {
+  width: 33.33%;
+}
+#nav #nav-wrap1 ul li a {
+  display: block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+#nav #nav-wrap1 ul li a img {
+  width: 100%;
+}
+#nav #nav-wrap2 {
+  border-top: 1px solid #ccc;
+}
+#nav #nav-wrap2 ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav #nav-wrap2 ul li {
+  width: 25%;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+#nav #nav-wrap2 ul li:nth-child(4n) {
+  border-right: none;
+}
+#nav #nav-wrap2 ul li a img {
+  width: 100%;
+}
+#main #sale {
+  width: 100vw;
+  display: flex;
+  padding: 15px 0;
+  background-color: #f7f7f7;
+}
+#main #sale .left {
+  width: 50%;
+}
+#main #sale .left a {
+  display: block;
+}
+#main #sale .left a img {
+  width: 100%;
+}
+#main #sale .right {
+  width: 50%;
+}
+#main #sale .right a {
+  display: block;
+}
+#main #sale .right a img {
+  width: 100%;
+}
+#main #hotActivity {
+  width: 100vw;
+  padding-bottom: 15px;
+  background-color: #f1f1f1;
+}
+#main #hotActivity .hotActivity-title {
+  height: 35px;
+  line-height: 35px;
+  background: #f1f1f1;
+}
+#main #hotActivity .hotActivity-title h4 {
+  margin-left: 10px;
+  font-weight: normal;
+}
+#main #hotActivity .hotActivity-content ul li {
+  border-bottom: 1px solid #ccc;
+}
+#main #hotActivity .hotActivity-content ul li a img {
+  width: 100%;
+}
+#main #vacation .vacation-title {
+  height: 45px;
+  line-height: 45px;
+  background: #f7f7f7;
+}
+#main #vacation .vacation-title ul {
+  display: flex;
+}
+#main #vacation .vacation-title ul li {
+  flex: 1;
+  text-align: center;
+}
+#main #vacation .vacation-title ul li a {
+  display: block;
+  height: 45px;
+}
+#main #vacation .vacation-title ul li a:first-of-type {
+  color: #d3079e;
+}
+#main #vacation .vacation-content ul li {
+  background-color: #fff;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+#main #vacation .vacation-content ul li a img {
+  width: 100%;
+}
+#main #vacation .vacation-content ul li .detail {
+  padding-left: 5px;
+}
+#main #vacation .vacation-content ul li .detail p {
+  padding: 4px 0;
+}
+#main .more {
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #fff;
+}
+#footer {
+  margin-top: 15px;
+  height: 30px;
+  background-color: #d3079e;
+  padding: 5px 10px;
+}
+#footer a {
+  color: #fff;
+}
+#footer a:last-child {
+  float: right;
+}

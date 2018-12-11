@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>驴妈妈主页</title>
+
+    <!-- 导入swiper的css -->
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <!-- 导入index.less -->
+    <!-- <link rel="stylesheet/less" href="less/index.less"> -->
+    <!-- 转成rem的less -->
+    <!-- <link rel="stylesheet/less" href="less/index-320rem.less"> -->
+    <link rel="stylesheet/less" href="less/index-640rem.less">
+
+    <!-- 导入less编译器 -->
+    <script src='lib/less/less.js'></script>
+
+    <script>
+        function getHtmlFontsize() {
+            // 假设一个设计稿的宽度 750
+            var DesignWidth = 640;
+            var DesignFontSize = 200;
+            // 获取当前视口的宽度
+            var nowWidth = document.documentElement.clientWidth;
+            /*750 / 200 == 375 / 100
+             设计稿宽度 / 设计稿根元素 == 当前屏幕宽度 / 当前屏幕根元素
+             375 / (750 / 200) == 100
+             当屏幕宽度  / (设计稿宽度 / 设计稿的根元素)
+             320 / (750 / 200)  == 85.3333px */
+            /* 4 / 2 == 2 / x
+             2 / ( 4 / 2 )  == 1*/
+            var nowFontSize = nowWidth / (DesignWidth / DesignFontSize);
+            document.documentElement.style.fontSize = nowFontSize + 'px';
+        }
+        getHtmlFontsize();
+        window.addEventListener('resize', getHtmlFontsize);
+    </script>
+
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="city">上海</div>
+        <div class="title">驴妈妈旅游网</div>
+        <div class="user"><img class='icon-my' src="images/icon/my.png" alt=""></div>
+    </header>
+
+    <!-- 轮播图区域 -->
+    <div id="slide" class="swiper-container">
+        <!-- 所有轮播项（所有轮播图片） -->
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="images/img/banner1.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/img/banner2.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/img/banner3.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/img/banner4.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/img/banner5.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/img/banner6.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/img/banner7.jpg" alt=""></a></div>
+
+        </div>
+        <!-- 分页器 小圆点 -->
+        <div class="swiper-pagination swiper-pagination-bullets">
+
+        </div>
+        <!-- 左右箭头 -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+    </div>
+
+    <!-- 导航区域 -->
+    <nav id="nav">
+        <div id="nav-wrap1">
+            <ul>
+                <li><a href="#"><img src="images/icon/nav1.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/nav2.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/nav3.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/nav4.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/nav5.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/nav6.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div id="nav-wrap2">
+            <ul>
+                <li><a href="#"><img src="images/icon/j1.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/j2.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/j3.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/j4.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/j5.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/j6.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/j7.png" alt=""></a></li>
+                <li><a href="#"><img src="images/icon/j8.png" alt=""></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主体区域 -->
+    <main id="main">
+        <!-- 特卖区 -->
+        <section id="sale">
+            <div class="left br">
+                <a href="#"><img src="images/img/t1.jpg" alt=""></a>
+            </div>
+            <div class="right">
+                <a class='bb' href="#"><img src="images/img/t2.jpg" alt=""></a>
+                <a href="#"><img src="images/img/t3.jpg" alt=""></a>
+            </div>
+        </section>
+
+        <!-- 热门活动区 -->
+        <section id="hotActivity">
+            <!-- 热门活动标题区 -->
+            <div class="hotActivity-title bb">
+                <h4>热门活动</h4>
+            </div>
+            <!-- 热门活动内容 -->
+            <div class="hotActivity-content">
+                <ul>
+                    <li><a href="#"><img src="images/img/r1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img/r2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img/r3.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img/r4.jpg" alt=""></a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- 假期区 -->
+        <section id="vacation">
+            <!-- 假期区标题 -->
+            <div class="vacation-title bt">
+                <ul>
+                    <li><a href="#">度周末</a></li>
+                    <li><a href="#">度长假</a></li>
+                </ul>
+            </div>
+            <!-- 假期区内容 -->
+            <div class="vacation-content">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/img/zm1.jpg" alt="">
+                        </a>
+                        <div class="detail">
+                            <h4>[热门活动]驴妈妈温泉季</h4>
+                            <p>听音乐，泡温泉，就找驴妈妈</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/img/zm2.jpg" alt="">
+                        </a>
+                        <div class="detail">
+                            <h4>[热门活动]驴妈妈温泉季</h4>
+                            <p>听音乐，泡温泉，就找驴妈妈</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/img/zm3.jpg" alt="">
+                        </a>
+                        <div class="detail">
+                            <h4>[热门活动]驴妈妈温泉季</h4>
+                            <p>听音乐，泡温泉，就找驴妈妈</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/img/zm4.jpg" alt="">
+                        </a>
+                        <div class="detail">
+                            <h4>[热门活动]驴妈妈温泉季</h4>
+                            <p>听音乐，泡温泉，就找驴妈妈</p>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="images/img/zm5.jpg" alt="">
+                        </a>
+                        <div class="detail">
+                            <h4>[热门活动]驴妈妈温泉季</h4>
+                            <p>听音乐，泡温泉，就找驴妈妈</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="more bb"><a href="#">查看更多</a></div>
+    </main>
+
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <a class='register' href="#">免费注册</a>
+        <a class='register' href="#">登录</a>
+        <a class='login' href="#">TOP</a>
+    </footer>
+
+    <!-- 导入swiper的js -->
+    <script src="lib/swiper/js/swiper.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+// 导入初始化公共样式
+@import "base-640rem.less";
+
+// 头部区域样式
+#header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0.225rem;
+    padding: 0 0.025rem 0 0.05rem;
+    line-height: 0.225rem;
+    background-color: #f7f7f7;
+    z-index: 999;
+    .city {
+        width: 0.25rem;
+        color: @main-color;
+        font-size: 0.06rem;
+    }
+    .title {
+        flex: 1;
+        text-align: center;
+        font-size: 0.075rem;
+    }
+    .user {
+        width: 0.125rem;
+        
+        img {
+            width: 0.125rem;
+        }
+    }
+}
+
+// 轮播图区域样式
+#slide {
+    margin-top: 0.225rem;
+    width: 100vw;
+    a { 
+        img {
+            width: 100%;
+        }
+    }
+}
+
+//导航区
+#nav {
+    width: 100vw;
+    #nav-wrap1 {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0.025rem 0 0 0.025rem;
+            li {
+                width: 33.33%;
+                a {
+                    display: block;
+                    margin-right: 0.025rem;
+                    margin-bottom: 0.025rem;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    #nav-wrap2 {
+        border-top: 1px solid #ccc;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 25%;
+                border-right: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                &:nth-child(4n) {
+                    border-right: none;
+                }
+                a {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 主体区
+#main {
+    // 特卖区
+    #sale {
+        width: 100vw;
+        display: flex;
+        padding: 0.075rem 0;
+        background-color: #f7f7f7;
+        .left {
+            width: 50%;
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .right {
+            width: 50%;
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    // 热门活动区
+    #hotActivity {
+        width: 100vw;
+        padding-bottom: 0.075rem;
+        background-color: #f1f1f1;
+        // 热门活动标题
+        .hotActivity-title {
+            height: 0.175rem;
+            line-height: 0.175rem;
+            background: #f1f1f1;
+            h4 {
+                margin-left: 0.05rem;
+                font-weight: normal;
+            }
+        }
+        .hotActivity-content {
+            ul {
+                li {
+                    border-bottom: 1px solid #ccc;
+                    a {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //假期区
+    #vacation {
+        // 标题
+        .vacation-title {
+            height: 0.225rem;
+            line-height: 0.225rem;
+            background: #f7f7f7;
+            ul {
+                display: flex;
+                li {
+                    flex: 1;
+                    text-align: center;
+                    a {
+                        display: block;
+                        // width: 0.25rem;
+                        height: 0.225rem;
+                        &:first-of-type {
+                            color: @main-color;
+                        }
+                    }
+                }
+            }
+            
+        }
+        // 内容
+        .vacation-content {
+            
+            ul {
+                li {
+                    background-color: #fff;
+                    margin-bottom: 0.075rem;
+                    border-bottom: 1px solid #ccc;
+                    a {
+                       
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .detail {
+                        padding-left: 0.025rem;
+                        p {
+                            padding: 0.02rem 0;
+                            font-size: .07rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //更多
+    .more {
+        height: 0.15rem;
+        text-align: center;
+        line-height: 0.15rem;
+        background: #fff;
+    }
+    
+}
+
+// 底部区域
+#footer {
+    margin-top: 0.075rem;
+    height: 0.25rem;
+    background-color: @main-color;
+    padding: 0.025rem 0.05rem;
+    a {
+        color: #fff;
+        &:last-child {
+            float: right;
+        }
+    }
+}
